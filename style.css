@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg: #020302;
+  --primary-color: #6be6a8;
+  --primary-text: #e5fbe5;
+  --secondary-text: #061619;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: #fff;
+
+  font-family: "Inter", sans-serif;
+}
+
+/* Globals */
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  border-bottom: 2px solid #1c1c1c;
+  padding: 1.3rem 0;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.landing {
+  margin: 4rem auto;
+}
+
+.landing h1 {
+  font-size: 3rem;
+  color: var(--primary-text);
+  margin-bottom: 30px;
+}
+
+.landing h2 {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.landing h2.grey {
+  color: #797979;
+}
+
+.landing .btn-primary {
+  background: var(--primary-color);
+  display: inline-block;
+  padding: 13px 27px;
+  color: var(--secondary-text);
+  font-weight: 600;
+  margin-top: 20px;
+  border-radius: 5px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+main label {
+  margin-right: 10px;
+}
+
+main select,
+main option {
+  padding: 10px 20px;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+main select {
+  padding: 10px 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+
+  outline: none;
+  border-radius: 5px;
+  border: none;
+
+  margin-bottom: 50px;
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 45px;
+
+  background: url("./icons/down.svg") no-repeat right #333;
+  background-position-x: 80%;
+}
+
+.course-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .course-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.course-container > .course {
+  border: 3px solid #232323;
+  padding: 30px 40px;
+  border-radius: 10px;
+}
+
+.course-container > .course p {
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: inline-block;
+  background: var(--primary-color);
+  color: var(--secondary-text);
+  padding: 5px 15px;
+  border-radius: 40px;
+  font-size: 0.8rem;
+}
+
+.course-container > .course h3 {
+  font-size: 1.3rem;
+}
+
+.course-container > .course .links {
+  margin-top: 25px;
+}
+
+.course-container > .course .link {
+  margin-bottom: 15px;
+}
+
+.course-container > .course a {
+  text-decoration: underline;
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .course-container > .course .link {
+    font-size: 0.8rem;
+  }
+
+  .course-container > .course a {
+    margin-left: 5px;
+  }
+}
+
+footer.container {
+  margin: 80px auto;
+}
+
+footer.container a {
+  text-decoration: underline;
+}
