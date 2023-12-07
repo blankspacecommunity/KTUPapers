@@ -37,6 +37,51 @@ a {
   color: #fff;
 }
 
+select,
+option {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+select {
+  padding: 10px 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+
+  outline: none;
+  border-radius: 5px;
+  border: none;
+
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 45px;
+
+  background: url("../icons/down.svg") no-repeat right #333;
+  background-position-x: 80%;
+}
+
+input {
+  all: unset;
+  display: block;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  display: inline-block;
+  padding: 13px 27px;
+  color: var(--secondary-text);
+  font-weight: 600;
+  border-radius: 5px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 header {
   border-bottom: 2px solid #1c1c1c;
   padding: 1.3rem 0;
@@ -88,29 +133,8 @@ main label {
   margin-right: 10px;
 }
 
-main select,
-main option {
-  padding: 10px 20px;
-  font-family: "Inter", sans-serif;
-  color: #fff;
-}
-
 main select {
-  padding: 10px 20px;
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-
-  outline: none;
-  border-radius: 5px;
-  border: none;
-
   margin-bottom: 50px;
-  -webkit-appearance: none;
-  appearance: none;
-  padding-right: 45px;
-
-  background: url("./icons/down.svg") no-repeat right #333;
-  background-position-x: 80%;
 }
 
 .course-container {

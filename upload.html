@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Previous ktu question papers. 2019 scheme. "
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/upload.css" />
+    <title>KTUPapers</title>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <ul>
+          <li><a href="./index.html">home</a></li>
+          <li><a href="#">contact us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="upload container">
+      <h1>Upload a paper</h1>
+
+      <form>
+        <fieldset>
+          <label for="semester">Semester:</label>
+          <select id="semester" name="semester">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <label for="courseCode">Course Code:</label>
+          <input type="text" id="courseCode" name="courseCode" />
+        </fieldset>
+
+        <fieldset>
+          <label for="monthYear" max="3000">Year:</label>
+          <input type="number" id="monthYear" name="monthYear" />
+        </fieldset>
+
+        <fieldset>
+          <label for="questionPaper">Question Paper Link:</label>
+          <input type="text" id="questionPaper" name="questionPaper" />
+        </fieldset>
+
+        <fieldset>
+          <label for="answerKey">Answer Key Link:</label>
+          <input type="text" id="answerKey" name="answerKey" />
+        </fieldset>
+
+        <a href="#" type="submit" class="btn-primary">Submit</a>
+      </form>
+    </div>
+
+    <footer class="container">
+      Open source at
+      <a href="https://github.com/">Github</a>
+    </footer>
+  </body>
+</html>
