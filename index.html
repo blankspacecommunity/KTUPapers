@@ -127,5 +127,51 @@
       Open source at
       <a href="https://github.com/">Github</a>
     </footer>
+
+    <script type="module">
+      const courseContainer = document.querySelector(".course-container");
+
+      const response = await fetch(
+        "https://6571c5b6d61ba6fcc01384bb.mockapi.io/papers"
+      );
+      const data = await response.json();
+
+      function getFormattedDate(date) {
+        let _date = new Date(date);
+        return _date.toLocaleString("en-US", {
+          year: "numeric",
+          month: "short",
+        });
+      }
+
+      data.forEach((course) => {
+        const courseEl = document.createElement("div");
+        courseEl.classList.add("course");
+
+        const currCourse = course.courseCode;
+
+        courseEl.innerHTML = `
+        <p>${course.courseCode}</p>
+        <h3>${course.courseName}</h3>
+        <div class="links">
+          ${data
+            .filter((_course) => _course.courseCode === currCourse)
+            .map((course) => {
+              return `<div class="link">
+              <span>${getFormattedDate(course.year)}</span>
+              <a href="${course.questionLink}">Question paper</a>
+              <a href="${course.answerLink}">Answer Key</a>
+            </div>`;
+            })
+            .join("")}
+
+        </div>
+        `;
+
+        courseContainer.insertAdjacentElement("afterbegin", courseEl);
+      });
+
+      console.log(data);
+    </script>
   </body>
 </html>

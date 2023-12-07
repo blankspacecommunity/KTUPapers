@@ -58,7 +58,7 @@
           <input type="text" id="answerKey" name="answerKey" />
         </fieldset>
 
-        <a href="#" type="submit" class="btn-primary">Submit</a>
+        <button type="submit" class="btn-primary">Submit</button>
       </form>
     </div>
 
@@ -66,5 +66,30 @@
       Open source at
       <a href="https://github.com/">Github</a>
     </footer>
+
+    <script type="module">
+      document.querySelector("form").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const jsonData = {};
+
+        formData.forEach((value, key) => {
+          jsonData[key] = value;
+        });
+
+        console.log(jsonData);
+
+        const response = await fetch(
+          "https://6571c5b6d61ba6fcc01384bb.mockapi.io/papers",
+          {
+            method: "POST",
+            body: jsonData,
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+      });
+    </script>
   </body>
 </html>
